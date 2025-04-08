@@ -27,7 +27,7 @@ module sign_mul (
 
     always_comb begin
         if (A[7] ^ B[7])  // If A and B have different signs
-            P = -product;  // Negative product
+            P = ~product;  // Negative product
         else
             P = product;  // Positive product (both negative or both positive)
     end
